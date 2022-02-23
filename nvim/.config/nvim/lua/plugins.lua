@@ -12,6 +12,9 @@ return require('packer').startup(function(use)
     -- Packer manages itself
     use 'wbthomason/packer.nvim'
 
+    -- Gruvebox color scheme
+    use 'morhetz/gruvbox'
+
     -- Status line
     use {
         'nvim-lualine/lualine.nvim',
