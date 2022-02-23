@@ -15,6 +15,12 @@ return require('packer').startup(function(use)
     -- Gruvebox color scheme
     use 'morhetz/gruvbox'
 
+    -- Language server
+    use {
+        'neovim/nvim-lspconfig',
+        config = require('setup/lspconfig')
+    }
+
     -- Status line
     use {
         'nvim-lualine/lualine.nvim',
