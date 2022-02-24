@@ -12,8 +12,12 @@ return require('packer').startup(function(use)
     -- Packer manages itself
     use 'wbthomason/packer.nvim'
 
-    -- Gruvebox color scheme
-    use 'morhetz/gruvbox'
+    -- Color scheme
+    --use 'morhetz/gruvbox'
+    use {
+        'navarasu/onedark.nvim',
+        config = require('setup/onedark')
+    }
 
     -- Language server
     use {

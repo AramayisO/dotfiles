@@ -5,7 +5,8 @@ vim.opt.number = true
 vim.opt.termguicolors = true
 
 -- Set color scheme
-vim.cmd([[ autocmd vimenter * ++nested colorscheme gruvbox ]])
+--vim.cmd([[ autocmd vimenter * ++nested colorscheme gruvbox ]])
+vim.cmd([[ colorscheme onedark ]])
 
 -- Convert tabs to spaces
 vim.opt.tabstop = 4
