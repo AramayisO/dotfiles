@@ -21,6 +21,12 @@ return require('packer').startup(function(use)
         config = require('setup/lspconfig')
     }
 
+    -- Language parser
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        config = require('setup/nvim-treesitter')
+    }
+
     -- Status line
     use {
         'nvim-lualine/lualine.nvim',
