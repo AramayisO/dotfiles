@@ -13,11 +13,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Color scheme
-    --use 'morhetz/gruvbox'
-    use {
-        'navarasu/onedark.nvim',
-        config = require('setup/onedark')
-    }
+    use 'sainnhe/gruvbox-material'
 
     -- Language server
     use {

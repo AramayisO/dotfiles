@@ -1,12 +1,17 @@
 -- Enable line numbering
 vim.opt.number = true
 
--- Enable 24-bit colors (required for color shceme and other plugins).
-vim.opt.termguicolors = true
-
 -- Set color scheme
---vim.cmd([[ autocmd vimenter * ++nested colorscheme gruvbox ]])
-vim.cmd([[ colorscheme onedark ]])
+vim.opt.termguicolors = true
+vim.opt.background = 'dark'
+vim.cmd([[ 
+    let g:gruvbox_material_enable_bold = 1
+    let g:gruvbox_material_enable_italic = 1
+    let g:gruvbox_material_transparent_background = 1
+    let g:gruvbox_material_diagnostic_virtual_text = 'colored'
+    let g:gruvbox_material_better_performance = 1
+    colorscheme gruvbox-material
+]])
 
 -- Convert tabs to spaces
 vim.opt.tabstop = 4
