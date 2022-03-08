@@ -14,11 +14,16 @@ vim.cmd([[
     colorscheme gruvbox-material
 ]])
 
+-- Highlight line
+vim.opt.cursorline = true
+
 -- Convert tabs to spaces
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 -- Don't expand tabs for Makefiles
 vim.cmd([[ autocmd FileType make setlocal noexpandtab ]])

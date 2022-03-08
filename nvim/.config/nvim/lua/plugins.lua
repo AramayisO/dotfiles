@@ -61,6 +61,15 @@ return require('packer').startup(function(use)
         config = require('setup/nvim-tree') 
     }
 
+    -- Git
+    use {
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim'
+      },
+      config = require('gitsigns').setup()
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
