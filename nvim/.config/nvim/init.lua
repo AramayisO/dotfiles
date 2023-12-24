@@ -7,6 +7,9 @@ vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 vim.o.expandtab = true
 
+-- Don't expand tabs for Makefiles
+vim.cmd([[ autocmd FileType make setlocal noexpandtab ]])
+
 -- Turn on line numbers
 vim.o.number = true
 
@@ -20,3 +23,10 @@ end
 
 vim.keymap.set('n', '<Leader>n', toggleLineNumbers)
 vim.keymap.set('n', '<Leader>r', toggleRelativeLineNumbers)
+
+-- Set split directions
+vim.o.splitbelow = true
+vim.o.splitright = true
+
+-- Highlight line
+vim.opt.cursorline = true
