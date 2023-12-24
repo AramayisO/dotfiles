@@ -1,6 +1,9 @@
 -- Set directory for swap files
 vim.o.directory = '/tmp/nvim/swap/'
 
+-- Set leader key
+vim.g.mapleader = " "
+
 -- Convert tabs to spaces
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
