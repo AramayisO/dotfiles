@@ -1,6 +1,2 @@
-require("config")
-require("plugins")
-
--- Don't expand tabs for Makefiles
-vim.cmd([[ autocmd FileType make setlocal noexpandtab ]])
-
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

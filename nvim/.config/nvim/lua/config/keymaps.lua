@@ -1,35 +1,7 @@
-function toggleLineNumbers()
-    local relNumbersEnabled = vim.o.relativenumber
+local telescope = require("telescope.builtin")
 
-    function wrapped()
-        vim.o.number = not vim.o.number
-
-        if vim.o.number then
-            vim.o.relativenumber = relNumbersEnabled 
-        else
-            relNumbersEnabled = vim.o.relativenumber
-            vim.o.relativenumber = false
-        end
-    end
-
-    return wrapped
-end
-
-function toggleRelativeLineNumbers()
-    local numbersEnabled = vim.o.number
-
-    function wrapped()
-        vim.o.relativenumber = not vim.o.relativenumber
-
-        if vim.o.relativenumber then
-            vim.o.number = numbersEnabled 
-        else
-            numbersEnabled = vim.o.number
-        end
-    end
-
-    return wrapped
-end
-
-vim.keymap.set('n', '<Leader>n', toggleLineNumbers())
-vim.keymap.set('n', '<Leader>r', toggleRelativeLineNumbers())
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+vim.keymap.set("n", "<leader>Q", ":confirm qa<CR>", { desc = "Quit all tabs", noremap = true })
+vim.keymap.set("n", "<leader>fh", telescope.help_tags, { desc = "Find help tags", noremap = true })
