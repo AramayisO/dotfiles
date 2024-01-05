@@ -53,33 +53,28 @@ return {
     "nvim-neotest/neotest-python",
   },
   {
-    "mfussenegger/nvim-dap",
-    dependencies = {
-      "mfussenegger/nvim-dap-python",
-    -- stylua: ignore
-    keys = {
-      { "<leader>dPt", function() require('dap-python').test_method() end, desc = "Debug Method", ft = "python" },
-      { "<leader>dPc", function() require('dap-python').test_class() end, desc = "Debug Class", ft = "python" },
-    },
-      config = function()
-        -- local path = require("mason-registry").get_package("debugpy"):get_install_path()
-        local path = "./.venv/bin/debugpy"
-        --require("dap-python").setup(path .. "/venv/bin/python")
-        require("dap-python").setup("./.venv/bin/python")
-        table.insert(require("dap").configurations.python, {
-          name = "Python: Webserver",
-          type = "python",
-          request = "launch",
-          program = "./src/run.py",
-          console = "integratedTerminal",
-          justMyCode = false,
-          env = {
-            ENV_FILE_PATH = "./envs/.env.debug",
-            BASTION_HOST_SSH_PKEY_PATH = "./.venv/AntonV2Bastion.pem",
-          },
-        })
-      end,
-    },
+    "mfussenegger/nvim-dap-python",
+    -- { "<leader>dPt", function() require('dap-python').test_method() end, desc = "Debug Method", noremap = true, silent = true },
+    -- { "<leader>dPc", function() require('dap-python').test_class() end, desc = "Debug Class", noremap = true, silent = true },
+    config = function()
+      local path = vim.fn.exepath("python")
+      local cwd = os.getenv("PWD")
+
+      require("dap-python").setup(path)
+
+      table.insert(require("dap").configurations.python, {
+        name = "Python: Webserver",
+        type = "python",
+        request = "launch",
+        program = cwd .. "/src/run.py",
+        console = "integratedTerminal",
+        justMyCode = false,
+        env = {
+          ENV_FILE_PATH = cwd .. "/envs/.env.debug",
+          BASTION_HOST_SSH_PKEY_PATH = cwd .. "/.venv/AntonV2Bastion.pem",
+        },
+      })
+    end,
   },
   {
     "linux-cultist/venv-selector.nvim",
