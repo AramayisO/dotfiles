@@ -1,6 +1,12 @@
 -- Theme
---vim.cmd("colorscheme cyberdream")
 vim.cmd("colorscheme flow")
+
+-- Only show one status line for all splits
+vim.opt.laststatus=3
+
+-- Default split directions
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 -- Set tabs to 4 spaces
 vim.opt.expandtab = true

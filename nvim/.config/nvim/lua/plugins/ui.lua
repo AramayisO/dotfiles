@@ -19,5 +19,9 @@ return {
         opts = {
             theme = "auto",
         },
+        config = function()
+            -- Lualine overwrites laststatus with 2 for some reason
+            vim.opt.laststatus = 3
+        end,
     }
 }
