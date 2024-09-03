@@ -1,14 +1,22 @@
 return {
     {
-        "scottmckendry/cyberdream.nvim",
+        "0xstepit/flow.nvim",
         lazy = false,
         priority = 1000,
-        transparent = true,
+        opts = {},
+        config = function() 
+            require("flow").setup({
+                transparent = true,
+                fluo_color = "pink", -- pink, yello, orange, or green
+                mode = "normal", -- Intensity of palette: normal, bright, desaturate, dark
+                aggressive_spell = true, -- Display colors for spell check
+            })
+        end,
     },
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        options = {
+        opts = {
             theme = "auto",
         },
     }

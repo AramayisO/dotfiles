@@ -1,5 +1,6 @@
 -- Theme
-vim.cmd("colorscheme cyberdream")
+--vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme flow")
 
 -- Set tabs to 4 spaces
 vim.opt.expandtab = true
