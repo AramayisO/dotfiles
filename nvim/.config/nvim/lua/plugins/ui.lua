@@ -6,7 +6,7 @@ return {
         opts = {},
         config = function() 
             require("flow").setup({
-                transparent = true,
+                transparent = false,
                 fluo_color = "pink", -- pink, yello, orange, or green
                 mode = "normal", -- Intensity of palette: normal, bright, desaturate, dark
                 aggressive_spell = true, -- Display colors for spell check
