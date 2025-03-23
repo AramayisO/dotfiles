@@ -9,3 +9,6 @@ vim.opt.expandtab = true
 vim.opt.splitbelow = true 
 vim.opt.splitright = true 
 
+-- Line numbering
+vim.opt.number = true
+vim.opt.relativenumber = true
