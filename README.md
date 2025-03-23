@@ -6,6 +6,10 @@ Currently, these configurations have only been tested on Linux (Fedora 42).
 ## What's configured
 
 ## Requirements
+- [Stow](https://www.gnu.org/software/stow/)
+- [Neovim](https://neovim.io)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [fzf](https://github.com/junegunn/fzf)
 
 ## Install
 
