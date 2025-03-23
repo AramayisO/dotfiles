@@ -9,7 +9,7 @@ Currently, these configurations have only been tested on Linux (Fedora 42).
 - [Stow](https://www.gnu.org/software/stow/)
 - [Neovim](https://neovim.io)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [fzf](https://github.com/junegunn/fzf)
+- [fd](https://github.com/sharkdp/fd)
 
 ## Install
 
