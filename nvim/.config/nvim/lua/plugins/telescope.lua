@@ -1,9 +1,8 @@
-local util = require("core.util")
-
+-- Available UI themes
 local themes = {
-    dropdown = "dropdown",
-    cursor = "cursor",
-    ivy = "ivy",
+    dropdown = "dropdown", -- centered list
+    cursor = "cursor",     -- cursor relative list
+    ivy = "ivy",           -- bottom panel overlay
 }
 
 --- Builds the pickers config table and sets the theme of all builtin pickers to the specified theme.
