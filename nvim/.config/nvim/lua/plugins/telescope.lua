@@ -35,5 +35,8 @@ return {
         telescope.setup({
             pickers = build_pickers_with_theme(builtins, themes.ivy)
         })
+
+        -- Use telescope-fzf-native extension
+        telescope.load_extension("fzf")
     end
 }
