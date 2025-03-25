@@ -41,5 +41,11 @@ return {
         })
 
         lspconfig.gopls.setup({})
+
+        lspconfig.pyright.setup({
+            on_new_config = function(config, root)
+                config.settings.python.pythonPath = vim.fn.expand(root .. "/.venv/bin/python")
+            end,
+        })
     end,
 }
